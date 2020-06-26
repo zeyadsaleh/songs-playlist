@@ -3,7 +3,6 @@ class LoginForm
 {
     public function __construct()
     {
-
         echo '<div id="myModal" class="modal fade">
             <div class="modal-dialog modal-login">
                 <div class="modal-content">

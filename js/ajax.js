@@ -7,11 +7,12 @@ $(function () {
             var playlistLength = $("<p></p>").text("Length: " + item.length).addClass("card-text");
             var playlistArtist = $("<p></p>").text("Artist: " + item.artist).addClass("card-text");
             var playlistUrl = $("<a>");
-            if (sessionStorage.getItem("login") && sessionStorage.getItem("login") === "successful") {
+            if (sessionStorage.getItem("login") && sessionStorage.getItem("login") === "successful") { //if logged in successfully
                 playlistUrl.attr("href", item.url);
                 playlistUrl.attr("target", "_blank");
+                //go to the song's url to consume it with php super global array $_GET
                 playlistUrl.click(function(){ window.location.href = "/?song=" + item.url });
-            } else {
+            } else { // if not logged in -> go to login modal
                 playlistUrl.attr("href", "#myModal");
                 playlistUrl.attr("data-toggle", "modal");
             }
