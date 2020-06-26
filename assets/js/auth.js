@@ -19,7 +19,7 @@ function auth(event) {
             sessionStorage.setItem("login", "successful"); // put in the session storage
             window.location.href = "/";
           } else {
-            document.getElementById("error").innerText = "Wrong username or password!";
+            document.getElementById("error").innerText = "Wrong username or password!"; 
             document.getElementById("username").value = "";
             document.getElementById("password").value = "";
           }
